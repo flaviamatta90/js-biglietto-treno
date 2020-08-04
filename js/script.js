@@ -15,10 +15,10 @@ var prezzoBiglietto = prezzoKm * km;
 // 5 Se ha 65 anni o piu avrà lo sconto del 40%
 if (età <= 18) {
  // console.log((prezzoBiglietto / 100) * 20);
- document.getElementById('costo').innerHTML = 'Il prezzo del biglietto è:' + ' ' + ((prezzoBiglietto / 100) * 20) + "€";
+ document.getElementById('costo').innerHTML = 'Il prezzo del biglietto è:' + ' ' + (prezzoBiglietto - (prezzoBiglietto / 100) * 20) + "€";
 } else if (età >= 65) {
  // console.log((prezzoBiglietto / 100) * 40);
- document.getElementById('costo').innerHTML = 'Il prezzo del biglietto è:' + ' ' + ((prezzoBiglietto / 100) * 40) + "€";
+ document.getElementById('costo').innerHTML = 'Il prezzo del biglietto è:' + ' ' + (prezzoBiglietto - (prezzoBiglietto / 100) * 40) + "€";
 } else {
 // console.log(prezzoBiglietto);
 document.getElementById('costo').innerHTML = 'Il prezzo del biglietto è:' + ' ' + (prezzoBiglietto) + "€";
